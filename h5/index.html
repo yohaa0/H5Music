@@ -1,41 +1,64 @@
 <!DOCTYPE html>
-<html lang="zh-CN"><head>
+<html lang="zh-CN">
+<head>
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="renderer" content="webkit">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>H5Music</title>
+    <title>H5Music Player</title>
     <!--[if lt IE 9]><script type="text/javascript" src="excanvas.js"></script><![endif]-->
     <script src="tagcanvas.js" type="text/javascript"></script>
     <script src="load.js" type="text/javascript"></script>
-	<!--<script type="text/javascript"></script>-->
+	<script type="text/javascript">
+	var  musicsrc =['http://i.y.qq.com/rsc/fcgi-bin/fcg_pyq_play.fcg?songid=&songmid=001IVmR52EKTx0&songtype=1&fromtag=50&uin=3233793689&code=52EB9'
+   ,'http://i.y.qq.com/rsc/fcgi-bin/fcg_pyq_play.fcg?songid=&songmid=003NRZIf12Rbsy&songtype=1&fromtag=50&uin=3233793689&code=405BF'
+   ,'http://i.y.qq.com/rsc/fcgi-bin/fcg_pyq_play.fcg?songid=&songmid=000T9Ie41JG3Dc&songtype=1&fromtag=50&uin=3233793689&code=F9B10'
+   ,'fcg_pyq_play.mp3'
+   ,'/storage/emulated/0/新文件夹/杨烁 - 小公主.mp3'
+   ,'/storage/emulated/0/新文件夹/小风铃.电影原声带.m4a'
+   ];
+   var newlist=new Array("1这个年纪","2七月的风","3音乐","4待添加","5音乐");
+   </script>
+<script>
+function opennew(){
+//
+}
 
+function addLink(){
+    var addlk=document.createElement('li');
+for (var i = 0; i < newlist.length; i++) {
+(function(i){	
+		addlk.innerHTML=newlist[i];
+		document.getElementById('mzdata').appendChild(addlk);	
+})(i);
+		}
+
+}
+
+
+</script>
   <link rel="stylesheet" type="text/css" href="music.css">
   </head>
-  <body>
-    <h1 align="center"  class="jbse" valign="middle">H5Music  歌云图</h1>
+  <body class="bbse">
+    <h1 align="center"  class="jbse" valign="middle">H5Music Player</h1>
 
 	<table  style="margin:0 auto;">
 	<div id="index">
 	<tr>
-		
-          <td   align="center"   valign="middle">
-
+		<tr>
+    <td align="center"   valign="middle"> <input type="button" onclick="addLink()" value="打开音乐">
+	<input type="button" onclick="addLink()" value="添加音乐"></td></tr>
+	<td   align="center"   valign="middle">
    <div id = love>
 		<audio src="" controls class="music"></audio>
-		<ul class="mlist">
+		<ul id = mzdata class="mlist">
 			<li>这个年纪</li>
 			<li>七月的风</li>
-			<li>音乐</li>		
-	        <li>七月的风</li>
-			<li>音乐</li>		
-            <li>七月的风</li>
-			<li>音乐</li>		
-			<li>七月的风</li>
-			<li>音乐</li>		
-			<li>七月的风</li>
-			<li>音乐</li>		
+			<li>音乐</li>	
+			<li>这个年纪</li>
+			<li>小公主</li>
+			<li>小风铃</li>
 		</ul>
 </div>
 </td>
@@ -53,7 +76,7 @@
     <div id="tags" style="display: none;">
       <ul>
         <li><a href="#" class="red medium">Google</a></li>
-        <li><a href="https://www.goat1000.com/fish">Fish</a></li>
+        <li><a href="#" class="red medium">Fish</a></li>
 		  <li><a href="javascript:lis[0].onclick();"  class="green medium">这个年纪</a></li>
 		  <li><a href="javascript:lis[1].onclick();" class="large">七月的风</a></li>
 		  <li><a href="javascript:lis[2].onclick();"class="large">音乐</a></li>
@@ -61,7 +84,9 @@
 		  <li><a href="#" class="small">青苹果</a></li>
 		  <li><a href="#" class="huge">云词</a></li>
 		  <li><a href="#" class="red medium">孙</a></li>
-		  <li><a href="#" class="red small">李</a></li>
+		  <li><a href="#" class="red small">李</a></li>		  
+		  <li><a href="javascript:lis[4].onclick();" ><img src="logo.png"/></a>/li>
+		  <li><a href="#03" onclick="return tpu(this)"><img src="logo.png" alt="Icon 03" /></a>/li>
 		  <li><a href="#" class="red medium">周</a></li>
 		  <li><a href="#" class="red small">舞</a></li>
 		  <li><a href="#" class="red large">乐</a></li>
@@ -71,7 +96,7 @@
 		  <li><a href="#" class="red medium">钱</a></li>
 		  <li><a href="#" class="green medium">jpeg</a></li>
 		  <li><a href="#" class="green small">jpegsaver</a></li>
-		  <li><a href="#" class="green large">美女</a></li>
+		  <li><a href="#" class="green large">美</a></li>
 		  <li><a href="#" class="green small">lib</a></li>
 		  <li><a href="#" class="green medium">library</a></li>
 		  <li><a href="#" class="green small">link</a></li>
