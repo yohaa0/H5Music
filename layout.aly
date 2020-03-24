@@ -1,0 +1,22 @@
+{
+  FrameLayout;
+  layout_height="fill";
+  layout_width="fill";
+  {
+    LinearLayout;
+    orientation="vertical";
+    layout_height="fill";
+    layout_width="fill";
+    {
+      FrameLayout;
+      layout_weight="1";
+      layout_width="fill";
+      {
+        LuaWebView;
+        layout_height="fill";
+        id="myWebView";
+        layout_width="fill";
+      };
+    };
+  };
+}

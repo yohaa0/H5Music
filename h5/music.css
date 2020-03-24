@@ -1,0 +1,107 @@
+*{
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+	list-style: none;
+	outline: none;
+	box-shadow: none;
+}
+body{
+animation:changeb 10s infinite;
+ }
+@keyframes changeb{
+0%{background-color:#fff;}
+15%{background-color:#f00;}
+25%{background-color:#0f0;}
+35%{background-color:#00f;}
+45% {background-color:#000;}
+55%{background-color:#f00;}
+65%{background-color:#0f0;}
+75%{background-color:#00f;}
+100% {background-color:#000;}
+}
+
+.jbse{
+animation:change 5s infinite;
+font-weight:100;
+ }
+@keyframes change{
+0%{color:#5cb85c;}
+25%{color:#556bd8;}
+50%{color:#2bcf85;}
+75%{color:#66e616;}
+100% {color:#67bd31;}
+}
+.cabk{
+    border-radius:50%; 
+    overflow:hidden;"
+    border: 3px solid black;
+    background-image: url(./cle.jpg);
+}
+#love{
+	position: relative;
+	height: 220px;
+	width: 300px;
+	border: 3px solid white;
+	border-radius: 10%;
+	background-image: url(./music.jpg);
+	background-size: cover;
+	
+}
+.play{
+	color: white;
+
+	margin:0 6px;
+}
+#love .mlist{
+	margin:10px;
+	background-color: rgba(1,1,1,0.3);
+	height: 145px;
+	border-radius: 5px;
+	overflow:scroll;
+
+}
+#love ul li{
+	line-height:30px;
+	text-align: center;
+	cursor:pointer;	
+	border-radius: 4px;
+	color: #fff;
+}
+
+#love ul li:hover{
+	line-height:45px;
+	text-align: center;
+	cursor:pointer;
+	margin:0 5px;
+	background-color: #00CCFF;
+	border-radius:6px;
+}
+canvas {
+ max-width: 400px;
+ width: 100%;
+ float: left;
+ margin-bottom: 20px
+}
+ul.weighted {
+ float: left;
+ display: block;
+ overflow: auto;
+ padding: 20px;
+ margin: 0 10px 20px 0;
+ background-color: #f0f;
+ border: 4px solid #aaa;
+ border-radius: 20px;
+ -moz-border-radius: 20px;
+}
+ul.weighted li { display: inline }
+ul.weighted li a { margin: 2px }
+.centred p { max-width: 320px; width: 100%; float: left; margin-left: 20px }
+.preright { float: left }
+.huge { font-family: Impact,sans-serif; font-size: 56px }
+.large { font-family: 'Arial Black',sans-serif; font-size: 40px }
+.medium { font-family: Verdana,sans-serif; font-size: 18px }
+.small { font-family: Georgia,sans-serif; font-size: 11px }
+a.red { color: #f00 }
+a.green { color: #0c0 }
+a.purple { color: #f09 }
