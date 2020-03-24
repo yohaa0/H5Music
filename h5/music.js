@@ -1,10 +1,9 @@
 var musicNode = document.getElementsByClassName('music')[0];
 var mlist = document.getElementsByClassName('mlist')[0];
-var lis = document.getElementsByTagName('li');
-var len = lis.length;
-
-musicNode.src = musicsrc[0];
-for (var i = 0; i < len; i++) { //单击改变playmusic
+	var lis = document.getElementsByTagName('li');
+	var len = lis.length;
+	musicNode.src = musicsrc[0];
+	for (var i = 0; i < len; i++) { //单击改变playmusic
     (function (i) {
         lis[i].onclick = function () {
             musicNode.src = musicsrc[i];
@@ -17,7 +16,26 @@ for (var i = 0; i < len; i++) { //单击改变playmusic
         }
     })(i);
 }
+function myplay(){
+	var lis = document.getElementsByTagName('li');
+	var len = lis.length;
+	musicNode.src = musicsrc[0];
+	for (var i = 0; i < len; i++) { //单击改变playmusic
+    (function (i) {
+        lis[i].onclick = function () {
+            musicNode.src = musicsrc[i];
+            musicNode.load();
+            musicNode.play();
+            for (var j = 0; j < len; j++) {
+                lis[j].className = '';
+            }
+            this.className = 'play';
+        }
+    })(i);
+}
+}
 musicNode.onended = function () { //音乐播放下一曲
+	var lis = document.getElementsByTagName('li');
     var ended = getPlay();
     if (ended == 2) { //若为最后一曲则放第一曲
         musicNode.src = musicsrc[0];

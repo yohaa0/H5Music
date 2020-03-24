@@ -39,4 +39,19 @@ window.onload = function () {
         // something went wrong, hide the canvas container
         document.getElementById('myCanvasContainer').style.display = 'none';
     }
+	myplay()//调用music.js中方法
 };
+function opennew(){
+//return newlist;
+}
+function addLink(){
+   
+  for (var i=0;i<arr.length;i++)
+{
+var addlk=document.createElement('li');
+newlist =arr[i];
+addlk.innerHTML=newlist;
+document.getElementById('mzdata').appendChild(addlk);
+   }
+   myplay()
+}
