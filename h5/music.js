@@ -13,6 +13,7 @@ var mlist = document.getElementsByClassName('mlist')[0];
                 lis[j].className = '';
             }
             this.className = 'play';
+			scrollToTop(i);
         }
     })(i);
 }
@@ -30,6 +31,7 @@ function myplay(){
                 lis[j].className = '';
             }
             this.className = 'play';
+			scrollToTop(i);
         }
     })(i);
 }
@@ -37,7 +39,7 @@ function myplay(){
 musicNode.onended = function () { //音乐播放下一曲
 	var lis = document.getElementsByTagName('li');
     var ended = getPlay();
-    if (ended == 2) { //若为最后一曲则放第一曲
+    if (ended == len) { //若为最后一曲则放第一曲
         musicNode.src = musicsrc[0];
         lis[0].className = 'play'
             lis[ended].className = '';
@@ -58,4 +60,12 @@ function getPlay() { //获取正在播放music的li
             return i
         }
     }
+}
+
+function scrollToTop(i){
+        //   ul的top值等于li的.offsetTop;值！scrollTop赋值为负数的时候，scrollTop赋值为0
+		document.getElementById('mzdata').scrollTop =lis[i].offsetTop-84;
+		if (document.getElementById('mzdata').scrollTop < 0){
+			document.getElementById('mzdata').scrollTop = 0;
+		}
 }
