@@ -45,13 +45,13 @@ function opennew(){
 //return newlist;
 }
 function addLink(){
-   
-  for (var i=0;i<arr.length;i++)
+    
+    for (var i=0;i<arr.length;i++)
 {
 var addlk=document.createElement('li');
 newlist =arr[i];
 addlk.innerHTML=newlist;
 document.getElementById('mzdata').appendChild(addlk);
-   }
-   myplay()
+}
+    myplay()
 }
