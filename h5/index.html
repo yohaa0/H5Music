@@ -11,24 +11,29 @@
 	<script src="var.js" type="text/javascript"></script>
     <script src="tagcanvas.js" type="text/javascript"></script>
     <script src="load.js" type="text/javascript"></script>
+	<script src="jquery.min.js"></script>
+	<script src="lizi.js" type="text/javascript"></script> 
 	
-	
-	<link rel="stylesheet" type="text/css" href="music.css">
+  
+    <link rel="stylesheet" type="text/css" href="music.css">
     </head>
-    <body class="bbse">
+    <body> 
     <h1 align="center"  class="jbse" valign="middle">H5Music Player</h1>
-
+	<div class="div">
 	<table  style="margin:0 auto;">
 	<div id="index">
 	<tr>
 		<tr>
     <td align="center"   valign="middle"> 
-	<input type="button" onclick="opennew()" value="打开音乐">
-	<input type="button" onclick="addLink()" value="添加音乐">
+	<input type="button" onclick="opennew()" value="打开音乐" class="btn11" onmouseover="this.style.backgroundPosition='left -20px'" onmouseout="this.style.backgroundPosition='left top'" style="background-position: left top;">
+
+	<input type="submit" class="btn45" onclick="addLink()" value="添加音乐" onmouseover="this.style.backgroundPosition='left -25px';this.style.color='#bcf1a7';" onmouseout="this.style.backgroundPosition='left top';this.style.color='#ffafaf';" style="background-position: left top; color: rgb(255, 175, 175);">
+	
+	<input type="button" onclick="setstyle()" value="更换样式" class="btn11" onmouseover="this.style.backgroundPosition='left -20px'" onmouseout="this.style.backgroundPosition='left top'" style="background-position: left top;">
 	</td>
 	</tr>
 	<td   align="center"   valign="middle">
-	<div id = love>
+   <div id = love>
 		<audio src="" controls class="music"></audio>
 		<ul id = mzdata class="mlist">
 			<li>这个年纪</li>
@@ -39,45 +44,47 @@
 </div>
 </td>
 </tr>
-	<script src="music.js" type="text/javascript"></script>
-
+  <script src="music.js" type="text/javascript"></script>
 	<tr>
-	<td   align="center"   valign="middle">
+	  <td   align="center"   valign="middle">
     <div id="myCanvasContainer">
-<<<<<<< HEAD
-		<canvas width="400" height="400" id="myCanvas" class="cabk">
-=======
       <canvas width="400" height="400" id="myCanvas" class="cabk" style="">
->>>>>>> parent of 8c45860... 223
         <p>Anything in here will be replaced on browsers that support the canvas element</p>
-		</canvas>
+      </canvas>
     </div>
     <div id="tags" style="display: none;">
-		<ul>
-		<li><a href="javascript:lis[0].onclick();"  class="green medium">这个年纪</a></li>
-			<li><a href="javascript:lis[1].onclick();" class="purple large">七月的风</a></li>
-			<li><a href="javascript:lis[2].onclick();"class="purple large">笑-太一</a></li>
-			<li><a href="#" class="green medium">狂浪</a></li>
-			<li><a href="#" class="small">青苹果</a></li>
-			<li><a href="#" class="green huge">云词</a></li>
-			<li><a href="#" class="red medium">孙</a></li>
-			<li><a href="#" class="red small">李</a></li>		  
-			<li><a href="javascript:lis[3].onclick();" ><img src="logo.png"/></a>/li>
-			<li><a href="javascript:lis[6].onclick();"><img src="logo.png" alt="Icon 03" /></a>/li>
-			<li><a href="#" class="red medium">周</a></li>
-			<li><a href="#" class="purple small">舞</a></li>
-			<li><a href="#" class="red large">乐</a></li>
-			<li><a href="#" class="red medium">美丽</a></li>
-			<li><a href="#" class="purple huge">赵</a></li>
-			<li><a href="#" class="red medium">钱</a></li>
-			<li><a href="#" class="green large">美</a></li>
-			<li><a href="#" class="green medium">爱情昨天</a></li>
-			<li><a href="#" class="purple huge">下山</a></li>
-		</ul>
+      <ul>
+		  <li><a href="javascript:lis[0].onclick();"  class="green medium">这个年纪</a></li>
+		  <li><a href="javascript:lis[1].onclick();" class="purple large">七月的风</a></li>
+		  <li><a href="javascript:lis[2].onclick();"class="purple large">笑-太一</a></li>
+		  <li><a href="#" class="green medium">狂浪</a></li>
+		  <li><a href="#" class="small">青苹果</a></li>
+		  <li><a href="#" class="green huge">云词</a></li>
+		  <li><a href="#" class="red medium">孙</a></li>
+		  <li><a href="#" class="red small">李</a></li>		  
+		  <li><a href="javascript:lis[3].onclick();" ><img src="logo.png"/></a>/li>
+		  <li><a href="javascript:lis[6].onclick();"><img src="logo.png" alt="Icon 03" /></a>/li>
+		  <li><a href="#" class="red medium">周</a></li>
+		  <li><a href="#" class="purple small">舞</a></li>
+		  <li><a href="#" class="red large">乐</a></li>
+		  <li><a href="#" class="red medium">美丽</a></li>
+		  <li><a href="#" class="purple huge">赵</a></li>
+		  <li><a href="#" class="red medium">钱</a></li>
+		  <li><a href="#" class="green large">美</a></li>
+		  <li><a href="#" class="green medium">爱情昨天</a></li>
+		  <li><a href="#" class="purple huge">下山</a></li>
+      </ul>
     </div>
+	
     </td>
 	</tr>
+	  </div>
+</table>	  
 	</div>
-</table>
+	
+  <div id="jsi-particle-container" style="display: none;" class="container">
+	</div>
 
+
+	 
 </body></html>

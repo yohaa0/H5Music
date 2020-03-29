@@ -23,6 +23,9 @@ webSettings = myWebView.getSettings();
 --支持JS(建议无论如何加上)
 webSettings.setJavaScriptEnabled(true);
 
+--支持中文，否则页面中中文显示乱码
+webSettings.setDefaultTextEncodingName("UTF-8");
+
 --无广告百度UA字符串
 APP_NAME_UA="Mozilla/5.0 (Linux; Android 7.0; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/48.0.2564.116 Mobile Safari/537.36 T7/10.3 SearchCraft/2.6.2 (Baidu; P1 7.0)"
 
@@ -32,7 +35,8 @@ webSettings.setUserAgentString(webSettings.getUserAgentString()..APP_NAME_UA);
 --WebView设置字体大小:100表示正常,120表示文字放大1.2倍
 webSettings.setTextZoom(100)
 
-myWebView.loadUrl("file:///android_asset/h5/index.html")--SearchViewEditText.Text)
+--myWebView.loadUrl("file:///android_asset/h5/index.html")--SearchViewEditText.Text)
+myWebView.loadUrl("file:///storage/emulated/0/AndroLua/project/H5Music/h5/index.html")--SearchViewEditText.Text)
 
 
 function onCreateOptionsMenu(menu)
@@ -47,9 +51,17 @@ function onOptionsItemSelected(item)
   if item.Title=="退出" then
     activity.finish()
    elseif item.Title=="打开" then
-    print(item.Title)
+    --print(item.Title)
+    activity.newActivity("edlist")
+   elseif item.Title=="添加" then
+    --print(item.Title)
+    activity.newActivity("edlist")
    else
-    print(item.Title)
+    -- print(item.Title)
+    tol=activity.getLuaDir()
+    print(tol)
+    Toast.makeText(activity, tol,Toast.LENGTH_SHORT).show()
+
   end
 end
 
@@ -57,7 +69,7 @@ end
 参数=0
 function onKeyDown(code,event)
   if string.find(tostring(event),"KEYCODE_BACK") ~= nil then
-    if 参数+2 > tonumber(os.time()) then
+    if 参数+3 > tonumber(os.time()) then
       activity.finish()--SearchViewLayout.setVisibility(View.VISIBLE)
      elseif 参数+3 > tonumber(os.time()) then
       activity.finish()

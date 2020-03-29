@@ -45,13 +45,24 @@ function opennew(){
 //return newlist;
 }
 function addLink(){
-    
-    for (var i=0;i<arr.length;i++)
+   
+  for (var i=0;i<arr.length;i++)
 {
 var addlk=document.createElement('li');
 newlist =arr[i];
 addlk.innerHTML=newlist;
 document.getElementById('mzdata').appendChild(addlk);
+   }
+   myplay()
 }
-    myplay()
+function setstyle(){   
+  var divstyleone=$('#myCanvasContainer');
+  var divstyletwo=$('#jsi-particle-container');
+if(divstyleone.is(':hidden')){　//如果node是隐藏的则显示node元素，否则隐藏，导入jQuery判断元素是否显示 是否隐藏
+　　divstyleone.show();
+divstyletwo.hide();
+}else{
+　　divstyleone.hide();
+divstyletwo.show();
+}
 }
