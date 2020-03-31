@@ -35,8 +35,8 @@ webSettings.setUserAgentString(webSettings.getUserAgentString()..APP_NAME_UA);
 --WebView设置字体大小:100表示正常,120表示文字放大1.2倍
 webSettings.setTextZoom(100)
 
---myWebView.loadUrl("file:///android_asset/h5/index.html")--SearchViewEditText.Text)
-myWebView.loadUrl("file:///storage/emulated/0/AndroLua/project/H5Music/h5/index.html")--SearchViewEditText.Text)
+myWebView.loadUrl("file:///android_asset/h5/index.html")--SearchViewEditText.Text)
+--myWebView.loadUrl("file:///storage/emulated/0/AndroLua/project/H5Music/h5/index.html")--SearchViewEditText.Text)
 
 
 function onCreateOptionsMenu(menu)

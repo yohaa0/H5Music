@@ -1,6 +1,6 @@
 window.onload = function () {
     TagCanvas.initial = [0.2, -0.4];
-    TagCanvas.centreImage = 'logo.png'; //中间图片
+    TagCanvas.centreImage = 'img/logo.png'; //中间图片
     TagCanvas.clickToFront = '500'; //如果设置为数字，选中的标记将在激活前的数毫秒内移动到前面。
     TagCanvas.textFont = 'Impact,"Arial Black",sans-serif';
     TagCanvas.textColour = '#00f';
